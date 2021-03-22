@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/as_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cross.magic.AdvancedSearch">
+
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_blank_frame"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <EditText
+                android:id="@+id/as_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@android:Color/transparent"
+                android:hint="@string/asname"
+                android:paddingEnd="150dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/as_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/ascost" />
+
+                <EditText
+                    android:id="@+id/as_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/ascolor" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_blank_frame"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/as_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/astype"
+                    android:paddingEnd="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/asbarralarga" />
+
+                <EditText
+                    android:id="@+id/as_subtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/assubtype"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/as_rarity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/asrarity" />
+
+                <EditText
+                    android:id="@+id/as_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/asset" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_blank_frame"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <EditText
+                android:id="@+id/as_oracle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@android:Color/transparent"
+                android:hint="@string/asoracle_text" />
+
+            <EditText
+                android:id="@+id/as_flavor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@android:Color/transparent"
+                android:hint="@string/asflavor_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingEnd="2dp"
+            >
+
+            <EditText
+                android:id="@+id/as_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@android:Color/transparent"
+                android:hint="@string/asartist"
+                android:paddingEnd="175dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_blank_frame"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:padding="2dp">
+
+                <EditText
+                    android:id="@+id/as_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/aspow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/asbarra" />
+
+                <EditText
+                    android:id="@+id/as_toughness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/astou" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/asbarra" />
+
+                <EditText
+                    android:id="@+id/as_loyalty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:background="@android:Color/transparent"
+                    android:hint="@string/asloy" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    -->
+    <include
+        android:id="@+id/include"
+        layout="@layout/card_layout"
+        app:layout_anchorGravity="center" />
+</FrameLayout>

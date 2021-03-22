@@ -1,0 +1,10 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310dp"
+    android:layout_height="220dp"
+    android:background="@drawable/search_fragments_background"
+    tools:context="com.cross.magic.Rarity">
+
+
+
+</FrameLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/am"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar"
+
+        >
+        <!--
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+-->
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main"
+        app:layout_anchor="@+id/fab"
+        app:layout_anchorGravity="left|bottom" />
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchBar"
+        style="@style/MaterialSearchBarLight"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:onClick="onClick"
+        app:mt_backIconTint="@color/white"
+        app:mt_clearIconTint="@color/white"
+        app:mt_hintColor="@color/white"
+        app:mt_maxSuggestionsCount="10"
+        app:mt_placeholder="Search a Card!"
+        app:mt_placeholderColor="@color/white"
+        app:mt_roundedSearchBarEnabled="true"
+        app:mt_searchBarColor="@color/grayTransparent"
+        app:mt_searchIconTint="@color/white"
+        app:mt_speechMode="false"
+        app:mt_textColor="@color/white" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        app:fab_addButtonColorNormal="@color/colorAccent"
+        app:fab_addButtonColorPressed="@color/Accent_pressed"
+        app:fab_expandDirection="up"
+        app:fab_labelStyle="@style/custom_fab"
+        app:fab_labelsPosition="left"
+        app:menu_icon="@drawable/ic_tap">
+
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/fab_action1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:fab_colorNormal="@Color/white"-->
+            <!--app:fab_colorPressed="@Color/white_pressed"-->
+            <!--app:fab_icon="@drawable/ic_settings"-->
+            <!--app:fab_size="mini"-->
+            <!--app:fab_title="Settings"-->
+
+            <!--/>-->
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_action2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_icon="@drawable/ic_ftvr"
+            app:fab_size="mini"
+            app:fab_title="Advanced Search" />
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/fab_action3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:fab_colorNormal="@Color/white"-->
+            <!--app:fab_colorPressed="@Color/white_pressed"-->
+            <!--app:fab_icon="@drawable/ic_decks"-->
+            <!--app:fab_size="mini"-->
+            <!--app:fab_title="Decks" />-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/fab_action4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:fab_colorNormal="@Color/white"-->
+            <!--app:fab_colorPressed="@Color/white_pressed"-->
+            <!--app:fab_icon="@drawable/ic_collection"-->
+            <!--app:fab_size="mini"-->
+            <!--app:fab_title="Collection"-->
+            <!--tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <RelativeLayout
+        android:id="@+id/bluraso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/slideView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/layout_bg"
+        >
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/ic_down_arrow"
+            android:layout_marginTop="5dp"
+            />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/photo"
+            android:src="@drawable/defaultback"
+            android:layout_width="745px"
+            android:layout_height="1040px"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <include
+            layout="@layout/card" />
+
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <RelativeLayout
+            android:id="@+id/fragment_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+           />
+    <!--</RelativeLayout>-->
+
+
+    <!--
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:scaleType="center"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/dfc_ignite"/>
+        -->
+
+</android.support.design.widget.CoordinatorLayout>
